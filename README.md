@@ -1,4 +1,4 @@
-# 📋  Todo List App 🏗️ 🧠 
+# 📋  Todo List App:
 
 This is a simple fullstack web application that allows users to manage their tasks by adding, completing, or deleting them. It also displays the number of tasks remaining. Built with Node.js, Express, MongoDB, and EJS, the app follows the MVC (Model, View, Controller) architecture pattern.
 
