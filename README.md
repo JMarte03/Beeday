@@ -2,8 +2,7 @@
 
 This is a simple fullstack web application that allows users to manage their tasks by adding, completing, or deleting them. It also displays the number of tasks remaining. Built with Node.js, Express, MongoDB, and EJS, the app follows the MVC (Model, View, Controller) architecture pattern.
 
-**Live demo:** <a href="https://todo-app-1uab.onrender.com">https://todo-app-1uab.onrender.com</a>
-https://todo-app-1uab.onrender.com
+**Live demo:** https://todo-app-1uab.onrender.com
 
 ![Diseño sin título](https://github.com/user-attachments/assets/df2ebf4e-2839-4912-bfba-ac179032629c)
 
