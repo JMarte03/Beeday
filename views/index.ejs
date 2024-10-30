@@ -5,46 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/af8325bcc7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
-    <title>To-Do</title>
+    <title>Document</title>
 </head>
 <body>
-    <div class="cnt">
-        <header>
-            <h1>To-Do List</h1>
-            <i class="fa-solid fa-circle-plus" title="Add new task"></i>
-        </header>
-        <main class="task-area">
-            <div id="addForm" class="add">
-                <form action="/createTask" method="POST">
-                    <div class="left">
-                        <input id="newTask" type="text" name="newTask" placeholder="Task title . . .">
-                    </div>
-                    <div class="right">
-                        <input type="submit" value="ADD">
-                        <input id="discard" type="button" value="DISCARD">
-                    </div>
-                </form>
+    <header>
+        <nav>
+            <section class="logo">
+                <img src="/img/bslogo.png" alt="website official logo">
+            </section>
+            <section class="pages">
+                <a href="#">About Me</a>
+                <a href="#" class="redirect">Log In</a> <!--LOGIN REDIRECT-->
+            </section>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <div class="content">
+                <h1>Beesthetic: Your To-Do Companion</h1>
+                <p>An easy-to-use app to keep track of your tasks.</p>
+                <a href="#" class="redirect">Get started</a> <!--SIGNUP REDIRECT-->
             </div>
-
-            <!-- HERE STARTS EJS -->
-            <% for(let i = 0; i < todo.length; i++) {%>
-                <div class="task" data-id='<%=todo[i]._id%>'>
-                    <div class="left">
-                        <input type="checkbox" <%= todo[i].completed ? "checked" : "" %>  id="check<%= i %>">
-                        <label for="check<%= i %>" class="<%= todo[i].completed ? 'completed' : 'pending' %>"><%= todo[i].task %></label>
-                    </div>
-                    <div class="right">
-                        <i class="fa-solid fa-trash" title="Delete task"></i>
-                    </div>
-                </div>
-            <% } %>
-            <p class="pending">Tasks pending: <%= left %></p>
-            <!-- HERE ENDS EJS -->
-        </main>
-    </div>
-    <script src="/js/main.js"></script>
+        </div>
+        <img src="/img/shape.png" alt="random shape">
+    </main>
+    <section>
+        <img src="" alt="">
+        <h2>With Beesthetics, you can:</h2>
+        <ul>
+            <li>
+                <div class="icon-ctn"><i class="fa-solid fa-plus"></i></i></div>
+                <span>Add new tasks - </span>Quickly jot down what you need to get done.
+            </li>
+            <li>
+                <div class="icon-ctn"><i class="fa-solid fa-check"></i></div>
+                <span>Mark tasks as complete or incomplete - </span>Stay on top of your progress with a single click.
+            </li>
+            <li>
+                <div class="icon-ctn"><i class="fa-solid fa-xmark"></i></div>
+                <span>Delete tasks - </span>Clear out tasks once they're no longer needed.
+            </li>
+            <li>
+                <div class="icon-ctn"><i class="fa-solid fa-list"></i></div>
+                <span>View the number of pending tasks - </span>Get an overview of what's left to accomplish.
+            </li>   
+        </ul>
+    </section>
+    <footer>
+        <div class="logo">
+            <img src="/img/marslogo.png" alt="creator logo">
+        </div>
+        <ul>
+            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+    </footer>
 </body>
 </html>

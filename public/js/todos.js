@@ -36,7 +36,7 @@ function cleanInput(){
 async function deleteTask(){
     const id = this.parentNode.parentNode.dataset.id
     try{
-        const response = await fetch('/deleteTask', {
+        const response = await fetch('todos/deleteTask', {
             method: 'delete',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
@@ -54,7 +54,7 @@ async function deleteTask(){
 async function markComplete(){
     const id = this.parentNode.parentNode.dataset.id
     try{
-        const response = await fetch('/markComplete', {
+        const response = await fetch('todos/markComplete', {
             method: 'put',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
@@ -72,7 +72,7 @@ async function markComplete(){
 async function markIncomplete(){
     const id = this.parentNode.parentNode.dataset.id
     try{
-        const response = await fetch('/markIncomplete', {
+        const response = await fetch('todos/markIncomplete', {
             method: 'put',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({

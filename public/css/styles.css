@@ -1,275 +1,162 @@
-/***************************************************************/
-/*GENERAL*/
-/***************************************************************/
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/********************************
+        GENERAL STYLES
+*********************************/
 
 body {
-  font-family: "Josefin Slab", serif;
-  background-color: #faf7f0;
+    background: #faf7f0;
+    font-size: 62.5%;
+    font-family: 'Josefin Slab', serif;
+    color: #4a4947
+}
+a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Hanken Grotesk', serif;
+}
+.redirect {
+    background-color: #af9594;
+    color: white;
 }
 
-/***************************************************************/
-/*LAYOUT*/
-/***************************************************************/
+/********************************
+             LAYOUT
+*********************************/
 
-.cnt {
-  width: 60%;
-  margin: 100px auto;
-}
+/* HEADER */
 
 header {
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.add form, .task {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 20px;
-  margin-bottom: 10px;
-}
-
-.task .left p {
-  display: inline-block;
-}
-
-/***************************************************************/
-/*SPECIFIC STYLES*/
-/***************************************************************/
-
-header {
-  border-bottom: 1px solid #d8d2c2;
-  padding-bottom: 35px;
-}
-
-h1 {
-  color: #4a4947;
-  font-size: 3rem;
-  font-weight: 300;
-}
-
-i {
-  font-size: 2.2rem;
-  cursor: pointer;
-  color: #b17547;
-  transition: color ease-in .09s;
-}
-
-.task-area {
-  padding-top: 35px;
-}
-
-.add {
-  display: none;
-}
-
-.add, .task {
-    border-radius: 10px;
-    background: #fafafa;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-}
-
-.add .left {
-  flex-basis: 60%;
-}
-
-input[type="text"]{
-  border: none;
-  background-color: #fafafa;
-  font-size: 1.1rem;
-  font-family: "Josefin Slab", serif;
-  border-bottom: 1px solid #d8d2c2;
-  padding-bottom: 10px;
-  width: 100%;
-  transition: border-bottom ease-in .1s;
-}
-
-input[type="text"]::placeholder {
-  color: #8b8a89;
-}
-
-input[type="button"], input[type="submit"] {
-  border: none;
-  margin-left: 7px;
-  width: 95px;
-  padding: 13px 10px;
-  border-radius: 7px;
-  font-family: "Josefin Slab", serif;
-  font-weight: 500;
-  transition: scale ease-in .06s;
-}
-
-input[type="submit"]{
-  background-color: #b17547;
-  color: white;
-}
-
-input[type="button"]{
-  background-color: #ebdcd5;
-  color: black;
-}
-
-.task .left {
-  position: relative;
-}
-
-.task .right i {
-  font-size: 1.3rem;
-  margin-left: 20px;
-}
-
-p.pending {
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid #d8d2c2;
-  font-size: 1.1rem;
-  font-style: italic;
-  color: #4a4947;
-}
-
-/***************************************************************/
-/*CHECKBOX STYLES*/
-/***************************************************************/
-
-label.pending, label.completed {
-  display: inline-block;
-  cursor: pointer;
-  position: relative;
-  padding-left: 55px;
-  margin-right: 15px;
-  font-size: 1.2rem;
-  color: #4a4947;
-}
-
-label.completed {
-  text-decoration: line-through;
-}
-
-label:before {
-  content: "";
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  background-color: white;
-  border: 1px solid #d8d2c2;
-  border-radius: 4px;
-}
-
-input[type="checkbox"] {
-  display: none;
-}
-.checkbox label:before {
-  border-radius: 5px;
-}
-
-input[type="checkbox"]:checked + label:before {
-  content: "\2713";
-  background-color: #d8d2c2;
-  font-size: 25px;
-  font-weight: light;
-  color: white;
-  text-align: center;
-}
-
-/***************************************************************/
-/* HOVER */
-/***************************************************************/
-
-i:hover {
-    color: #e4ab90;
-}
-
-input[type="text"]:focus{
-  outline: none;
-  border-bottom: 1px solid #d5a37d;
-}
-
-input[type="button"]:hover, input[type="submit"]:hover{
-  scale: 0.9;
-}
-
-/***************************************************************/
-/* MEDIA QUERIES */
-/***************************************************************/
-
-
-@media screen and (min-width: 1700px){
-  label.pending, label.completed {
-    font-size: 1.8rem;
-    padding-left: 65px;
-  }
-  label::before {
-    height: 35px;
-    width: 35px;
-  }
-  p.pending {
-    font-size: 1.5rem;
-  }
-}
-@media screen and (max-width: 1140px) {
-  .add form {
-    flex-direction: column;
-    align-items: flex-start;
     width: 100%;
-    gap: 16px;
-  }
-
-  .add .left {
+    height: 10vh;
+    padding: 40px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    flex-basis: 20%;
+    max-width: 150px;
+    padding: 0;
+}
+.logo img {
     width: 100%;
-  }
+}
+.pages {
+    flex-basis: 60%;
+    text-align: right;
+}
 
-  .add .right {
-    padding-top: 15px;
+.pages a {
+    margin-left: 30px;
+}
+
+/* MAIN */
+
+main {
+    height: 90vh;
     width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+main div {
+    width: 100%;
+    height: 50vh;
     display: flex;
     justify-content: center;
-    gap: 10px;
-  }
-
-  input[type="button"], input[type="submit"] {
-    flex-basis: 49%;
-    margin-left: 0;
-  }
+    align-items: center;
 }
 
-@media screen and (max-width: 640px){
-  h1 {
-    font-size: 2rem;
-  }
-  header i {
-    font-size: 1.5rem;
-  }
-  .add .right {
-    flex-direction: column;
-    gap: 5px;
-  }
-  input[type="button"], input[type="submit"] {
+main div .content {
     width: 100%;
-    font-size: 0.7rem;
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
-@media screen and (max-width: 470px){
-  label::before {
-    height: 20px;
-    width: 20px;
-  }
-  label.pending, label.completed {
-    padding-left: 45px;
-    margin-right: 10px;
-    font-size: 1.1rem;
-  }
+main img {
+    width: 100%;
+    margin-top: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/********************************
+        SPECIFIC STYLES
+*********************************/
+
+/* HEADER */
+
+.pages a {
+    font-weight: 200;
+    font-size: 1rem;
+}
+.pages .redirect {
+    padding: 7px 20px;
+    border-radius: 10px;
+}
+
+/* MAIN */
+
+main h1 {
+    font-weight: 400;
+    font-size: 3.3rem;
+}
+
+main p {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+main .redirect {
+    width: 70%;
+    max-width: 450px;
+    border-radius: 30px;
+    padding: 9px 20px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+/* SECTION */
+
+.deco-box{
+    display: inline-block;
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+.box {
+    width: 100%;
+    height: 20vh;
+    background-color: #ebdcd5;
+    position: relative;
+}
+
+.img-ctn {
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    padding: 10px;
+}
+
+.img-ctn img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 20px;
 }

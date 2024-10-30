@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/af8325bcc7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/todos.css">
+    <title>To-Do</title>
+</head>
+<body>
+    <div class="cnt">
+        <header>
+            <h1>To-Do List</h1>
+            <i class="fa-solid fa-circle-plus" title="Add new task"></i>
+        </header>
+        <main class="task-area">
+            <div id="addForm" class="add">
+                <form action="/todos/createTask" method="POST">
+                    <div class="left">
+                        <input id="newTask" type="text" name="newTask" placeholder="Task title . . .">
+                    </div>
+                    <div class="right">
+                        <input type="submit" value="ADD">
+                        <input id="discard" type="button" value="DISCARD">
+                    </div>
+                </form>
+            </div>
+
+            <!-- HERE STARTS EJS -->
+            <% for(let i = 0; i < todo.length; i++) {%>
+                <div class="task" data-id='<%=todo[i]._id%>'>
+                    <div class="left">
+                        <input type="checkbox" <%= todo[i].completed ? "checked" : "" %>  id="check<%= i %>">
+                        <label for="check<%= i %>" class="<%= todo[i].completed ? 'completed' : 'pending' %>"><%= todo[i].task %></label>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-trash" title="Delete task"></i>
+                    </div>
+                </div>
+            <% } %>
+            <p class="pending">Tasks pending: <%= left %></p>
+            <!-- HERE ENDS EJS -->
+        </main>
+    </div>
+    <script src="/js/todos.js"></script>
+</body>
+</html>
