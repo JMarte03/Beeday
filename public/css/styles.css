@@ -19,6 +19,13 @@ a {
     text-decoration: none;
     font-family: 'Hanken Grotesk', serif;
 }
+
+.logo img {
+    width: 100%;
+    min-width: 120px;
+    max-width: 220px;
+}
+
 .redirect {
     background-color: #af9594;
     color: white;
@@ -45,9 +52,6 @@ nav {
     max-width: 150px;
     padding: 0;
 }
-.logo img {
-    width: 100%;
-}
 .pages {
     flex-basis: 60%;
     text-align: right;
@@ -62,33 +66,66 @@ nav {
 main {
     height: 90vh;
     width: 100%;
-    padding: 20px;
     position: relative;
 }
 
-main div {
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main div .content {
-    width: 100%;
+main .content {
+    width: 90%;
+    height: 90vh;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 40px;
+    padding-bottom: 130px;
 }
 
 main img {
     width: 100%;
-    margin-top: 50px;
     position: absolute;
-    left: 0;
     bottom: 0;
+}
+
+/* SECTION */
+
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.info img {
+    width: 100%;
+}
+
+.info .content {
+    width: 70%;
+    margin: 50px auto 0 auto;
+}
+
+.info li {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+    align-items: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
 }
 
 /********************************
@@ -131,32 +168,75 @@ main .redirect {
 
 /* SECTION */
 
-.deco-box{
-    display: inline-block;
-    height: 80vh;
-    width: 100%;
-    position: relative;
-    margin-bottom: 20px;
-    z-index: 1;
-}
-.box {
-    width: 100%;
-    height: 20vh;
-    background-color: #ebdcd5;
-    position: relative;
+.info h2 {
+    padding-bottom: 25px;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 200;
+    font-size: 2rem;
+    color: #7d6463;
 }
 
-.img-ctn {
-    width: 80%;
-    margin: 0 auto;
-    position: absolute;
-    top: 30px;
-    left: 10%;
-    padding: 10px;
-}
-
-.img-ctn img {
-    width: 100%;
-    max-width: 700px;
+.info li {
+    list-style-type: none;
+    line-height: 25px;
+    background-color: #fafafa;
+    padding: 30px;
+    font-size: 1rem;
     border-radius: 20px;
+    color: #6b6258
+}
+
+.info i {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    color: #7d6463;
+}
+
+.info span {
+    font-weight: 500;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #7d6463;
+    padding: 40px;
+}
+
+footer li {
+    list-style-type: none;
+    background-color: #faf7f0;
+    padding: 10px 12px;
+    border-radius: 50%;
+    color: #4a4947;
+    font-size: 0.9rem;
+}
+
+/********************************
+        MEDIA QUERIES
+*********************************/
+
+@media screen and (max-width: 430px) {
+    header nav .pages {
+        display: none;
+    }
+    main {
+        height: 90vh;
+    }
+    main .content {
+        text-align: left;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    main .content h1 {
+        font-size: 2.6rem;
+        line-height: 50px;
+    }
+    main .content p {
+        font-size: 1.4rem;
+    }
+    .info .content {
+        width: 80%;
+    }
 }
