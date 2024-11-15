@@ -146,7 +146,8 @@ footer ul {
 /* MAIN */
 
 main h1 {
-    font-weight: 400;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 200;
     font-size: 3.3rem;
 }
 
