@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /********************************
+          GENERAL STYLES
+  *********************************/
+  
+  body {
+    background: #faf7f0;
+    font-size: 62.5%;
+    font-family: "Josefin Slab", serif;
+    color: #4a4947;
+  }
+
+/********************************
+            LAYOUT
+*********************************/
+
+nav {
+    padding: 40px;
+}
+
+.logo-ctn {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .logo {
+    width: 150px;
+    padding-bottom: 50px;
+  }
+
+main {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+form {
+    padding-top: 25px; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="submit"]{
+    margin-top: 20px;
+}
+
+.shape {
+    width: 100%;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/********************************
+        SPECIFIC STYLES
+*********************************/
+
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+  
+  input {
+    background: white;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  input::placeholder {
+    color: #8b8a89;
+    font-family: "Josefin Slab", serif;
+  }
+  
+  input[type="submit"] {
+    background-color: #af9594;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .error-message {
+    background: rgb(255, 215, 225);
+    border-left: 2px solid rgb(237, 46, 53);
+    color: black;
+    font-family: 'Hanken Grotesk', sans-serif;
+    padding: 10px;
+    font-size: 0.7rem;
+    margin-bottom: 3px;
+    font-weight: 300;
+  }

@@ -8,7 +8,11 @@ const TodoSchema = new mongoose.Schema({
   completed: {
     type: Boolean,
     required: true,
+  },
+  userId: {
+    type: String,
+    required: true
   }
-}, { collection: 'tasks' });  // Explicitly specify the collection name
+}, { collection: 'tasks' }); 
 
 module.exports = mongoose.model('Todo', TodoSchema);

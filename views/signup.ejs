@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>SIGNUP PAGE!!</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/signup.css" />
+    <title>Signup</title>
+  </head>
+  <body>
+    <main>
+      <section class="signup">
+            <div class="logo-ctn">
+                <a href="/"><img src="/img/bslogo.png" alt="Website logo" class="logo" /></a>
+            </div>
+            <div class="content">
+                <h1>Sign Up</h1>
+                <form action="/signup" method="POST">
+                    <% if (locals.messages.errors) { %>
+                      <div>
+                        <% messages.errors.forEach( el => { %>
+                            <div class="error-message"><%= el.msg %></div>
+                        <% }) %>    
+                      </div>
+                    <% } %>
+                    <input
+                    type="text"
+                    name="userName"
+                    id="username"
+                    placeholder="Username"
+                    />
+                    <input type="email" name="email" id="email" placeholder="Email" />
+                    <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    />
+                    <input
+                    type="password"
+                    name="confirmPassword"
+                    id="passconf"
+                    placeholder="Confirm password"
+                    />
+                    <input type="submit" value="Continue →" />
+                </form>
+            </div>
+      </section>
+      <div class="deco-img"></div>
+    </main>
+  </body>
 </html>

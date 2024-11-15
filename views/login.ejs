@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/login.css" />
     <title>Document</title>
 </head>
 <body>
-    <h1>LOGIN PAGE!!</h1>
+    <nav>
+        <div class="logo-ctn">
+            <a href="/"><img src="/img/bslogo.png" alt="Website logo" class="logo" /></a>
+        </div>
+    </nav>
+    <main>
+            <h1>Log In</h1>
+            <form action="/login" method="POST">
+                <% if (locals.messages.errors) { %>
+                    <div>
+                        <% messages.errors.forEach( el => { %>
+                            <div class="error-message"><%= el.msg %></div>
+                        <% }) %>    
+                    </div>
+                <% } %>
+                <% if (locals.messages.info) { %>
+                    <div>
+                        <% messages.info.forEach( el => { %>
+                            <div class="error-message"><%= el.msg %></div>
+                        <% }) %>    
+                    </div>
+                <% } %>
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit" value="continue →">
+            </form>
+    </main>
+    <img src="/img/shape.png" class="shape" alt="random shape">
 </body>
 </html>

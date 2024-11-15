@@ -158,10 +158,10 @@ main p {
 main .redirect {
     width: 70%;
     max-width: 450px;
-    border-radius: 30px;
-    padding: 9px 20px;
+    border-radius: 15px;
+    padding: 15px 20px;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 200;
     text-transform: uppercase;
 }

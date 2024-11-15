@@ -62,6 +62,7 @@ i {
   cursor: pointer;
   color: #b17547;
   transition: color ease-in .09s;
+  padding-left: 20px;
 }
 
 .task-area {

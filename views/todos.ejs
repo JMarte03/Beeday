@@ -14,13 +14,16 @@
     <div class="cnt">
         <header>
             <h1>To-Do List</h1>
-            <i class="fa-solid fa-circle-plus" title="Add new task"></i>
+            <div>
+                <i class="fa-solid fa-circle-plus" title="Add new task"></i>
+                <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+            </div>
         </header>
         <main class="task-area">
             <div id="addForm" class="add">
                 <form action="/todos/createTask" method="POST">
                     <div class="left">
-                        <input id="newTask" type="text" name="newTask" placeholder="Task title . . .">
+                        <input id="newTask" type="text" name="todoItem" placeholder="Task title . . .">
                     </div>
                     <div class="right">
                         <input type="submit" value="ADD">
@@ -30,11 +33,11 @@
             </div>
 
             <!-- HERE STARTS EJS -->
-            <% for(let i = 0; i < todo.length; i++) {%>
-                <div class="task" data-id='<%=todo[i]._id%>'>
+            <% for(let i = 0; i < todos.length; i++) {%>
+                <div class="task" data-id='<%=todos[i]._id%>'>
                     <div class="left">
-                        <input type="checkbox" <%= todo[i].completed ? "checked" : "" %>  id="check<%= i %>">
-                        <label for="check<%= i %>" class="<%= todo[i].completed ? 'completed' : 'pending' %>"><%= todo[i].task %></label>
+                        <input type="checkbox" <%= todos[i].completed ? "checked" : "" %>  id="check<%= i %>">
+                        <label for="check<%= i %>" class="<%= todos[i].completed ? 'completed' : 'pending' %>"><%= todos[i].task %></label>
                     </div>
                     <div class="right">
                         <i class="fa-solid fa-trash" title="Delete task"></i>

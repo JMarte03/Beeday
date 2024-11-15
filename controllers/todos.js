@@ -3,9 +3,9 @@ const Todo = require('../models/Todo')
 module.exports = {
     getTodo: async (req,res)=>{
         try{
-            const todoItems = await Todo.find()
-            const itemsLeft = await Todo.countDocuments({completed: false})
-            res.render('todos.ejs', {todo: todoItems, left: itemsLeft})
+            const todoItems = await Todo.find({userId:req.user.id})
+            const itemsLeft = await Todo.countDocuments({userId:req.user.id,completed: false})
+            res.render('todos.ejs', {todos: todoItems, left: itemsLeft, user: req.user})
             console.log(todoItems)
         }catch(err){
             console.log(err)
@@ -13,7 +13,7 @@ module.exports = {
     },
     createTask: async (req, res)=>{
         try{
-            await Todo.create({task: req.body.newTask, completed: false})
+            await Todo.create({task: req.body.todoItem, completed: false, userId: req.user.id})
             console.log('Todo has been added!')
             res.redirect('/todos')
         }catch(err){
