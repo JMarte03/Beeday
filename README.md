@@ -14,7 +14,7 @@ The app is designed using a fullstack approach:
 
 - **Frontend:** HTML, CSS, and EJS for templating.
 - **Backend:** Node.js and Express for server-side logic and routing.
-- **Database:** MongoDB for storing tasks.
+- **Database:** MongoDB for storing tasks and users.
 - **MVC Pattern:** The app is structured using the Model-View-Controller design pattern for better maintainability and scalability.
 - **Routing:** The app includes basic routing to handle task creation, completion, and deletion.
 
