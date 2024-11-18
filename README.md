@@ -26,11 +26,21 @@ The app is designed using a fullstack approach:
 
 ## 🔧  Optimizations
 
-Potential future improvements include adding features like authentication, task editing, and due dates. There are also opportunities to optimize the code for handling larger task lists more efficiently and improving database query performance.
+Future improvements could include:
+
+- Adding task editing and due dates.
+- Expanding authentication by integrating other Passport.js strategies, like Google OAuth.
+- Optimizing code to handle larger task lists more efficiently.
+- Improving database query performance.
 
 ## 🧠  Lessons Learned:
 
-Building this app reinforced my understanding of the MVC architecture and the fullstack development process. I also gained more experience with server-side routing and database integration using MongoDB.
+Working on this app helped me:
+
+- Understand the MVC architecture better.
+- Strengthen my full-stack development skills.
+- Gain more experience with server-side routing and MongoDB for database integration.
+- Learn how to implement authentication using Passport.js with the local strategy.
 
 
 
