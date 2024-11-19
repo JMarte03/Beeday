@@ -2,7 +2,7 @@
 
 This is a simple fullstack web application that allows users to manage their tasks by adding, completing, or deleting them. It also displays the number of tasks remaining. Built with Node.js, Express, MongoDB, and EJS, the app follows the MVC (Model, View, Controller) architecture pattern.
 
-_Currently working on optimizations..._
+
 
 ![Diseño sin título](https://github.com/user-attachments/assets/df2ebf4e-2839-4912-bfba-ac179032629c)
 
@@ -14,11 +14,13 @@ The app is designed using a fullstack approach:
 
 - **Frontend:** HTML, CSS, and EJS for templating.
 - **Backend:** Node.js and Express for server-side logic and routing.
-- **Database:** MongoDB for storing tasks.
+- **Database:** MongoDB for storing tasks and users.
+- **Authentication:** Passport.js for authentication, using the local Strategy.
 - **MVC Pattern:** The app is structured using the Model-View-Controller design pattern for better maintainability and scalability.
 - **Routing:** The app includes basic routing to handle task creation, completion, and deletion.
 
 ### Key Features:
+- Signup and Login
 - Add new tasks.
 - Mark tasks as complete or incomplete.
 - Delete tasks.
@@ -26,11 +28,21 @@ The app is designed using a fullstack approach:
 
 ## 🔧  Optimizations
 
-Potential future improvements include adding features like authentication, task editing, and due dates. There are also opportunities to optimize the code for handling larger task lists more efficiently and improving database query performance.
+Future improvements could include:
+
+- Adding task editing and due dates.
+- Expanding authentication by integrating other Passport.js strategies, like Google OAuth.
+- Optimizing code to handle larger task lists more efficiently.
+- Improving database query performance.
 
 ## 🧠  Lessons Learned:
 
-Building this app reinforced my understanding of the MVC architecture and the fullstack development process. I also gained more experience with server-side routing and database integration using MongoDB.
+Working on this app helped me:
+
+- Understand the MVC architecture better.
+- Strengthen my full-stack development skills.
+- Gain more experience with server-side routing and MongoDB for database integration.
+- Learn how to implement authentication using Passport.js with the local strategy.
 
 
 
