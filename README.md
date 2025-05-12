@@ -6,9 +6,6 @@ Link to the Website: https://beeday.onrender.com
 
 ![Diseño sin título](https://github.com/user-attachments/assets/df2ebf4e-2839-4912-bfba-ac179032629c)
 
-![teleradionorte](https://github.com/user-attachments/assets/28ebd1f4-0b1e-4b76-9121-2c8e004220a3)
-
-
 ## 💻  How It's Made:
 
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" /> <img src="https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" /> <img src="https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white" /> <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" /> <img src="https://img.shields.io/badge/ejs-%23B4CA65.svg?style=for-the-badge&logo=ejs&logoColor=white" />
